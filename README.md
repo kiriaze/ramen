@@ -6,15 +6,6 @@
 
 This project was made to help with building RESTful APIs and microservices in a quick an easy manner ontop of Node.js, Express, Mongoose, Heroku, Atlas, Nodemon and Babel using async/await and JWT.
 
-Connect your mongoDB app/cluster by making a copy of the `config/default.example.json` to `config/default.json` with your cloud.mongo/atlas values.
-
-🚀 To deploy to Heroku:
-
-- Install heroku cli via their installer (link to heroku) or homebrew.
-- Log into your heroku account with `heroku login`.
-- Create the application on heroku with `heroku create`.
-- And subsquently push to heroku with `git push heroku master`.
-
 <!--![](https://media.giphy.com/media/DLYMDk6eYRbkA/giphy.gif)-->
 
 ![](https://media.giphy.com/media/Cd7Y7tJ4pHbGM/giphy.gif)
@@ -31,6 +22,17 @@ Connect your mongoDB app/cluster by making a copy of the `config/default.example
 
 1. `npm i`
 2. `npm run dev`
+
+#### 💥 To connect to Atlas/Cloud.mongodb.com
+
+- Make a copy of `config/default.example.json` to `config/default.json` with your cloud.mongo/atlas values.
+
+#### 🚀 To deploy to Heroku:
+
+- Install heroku cli via their installer (link to heroku) or homebrew.
+- Log into your heroku account with `heroku login`.
+- Create the application on heroku with `heroku create`.
+- And subsquently push to heroku with `git push heroku master`.
 
 ### Notes
 
