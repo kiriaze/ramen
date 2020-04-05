@@ -21,7 +21,7 @@ This project was made to help with building RESTful APIs and microservices in a 
 ## Installation Steps
 
 1. `npm i`
-2. To run server: `npm run dev`
+2. To run server: `npm start`
    - If you're housing your frontend with your api (frontend code within client directory), run `npm run dev` instead.
 
 #### 💥 To connect to Atlas/Cloud.mongodb.com
