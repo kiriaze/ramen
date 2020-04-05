@@ -21,7 +21,8 @@ This project was made to help with building RESTful APIs and microservices in a 
 ## Installation Steps
 
 1. `npm i`
-2. `npm run dev`
+2. To run server: `npm run dev`
+   - If you're housing your frontend with your api (frontend code within client directory), run `npm run dev` instead.
 
 #### 💥 To connect to Atlas/Cloud.mongodb.com
 
@@ -29,6 +30,9 @@ This project was made to help with building RESTful APIs and microservices in a 
 
 #### 🚀 To deploy to Heroku:
 
+##### Prerequisite: Put your frontend code into the `client` directory for the heroku npm script to run correctly.
+
+- Create a Heroku account.
 - Install heroku cli via their installer (link to heroku) or homebrew.
 - Log into your heroku account with `heroku login`.
 - Create the application on heroku with `heroku create`.
