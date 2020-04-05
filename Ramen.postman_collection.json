@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "75f76bcb-9c64-49ca-adc3-7a835f3ba6ac",
+		"name": "Ramen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users & Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bob Ross\",\n\t\"email\": \"bob@ross.com\",\n\t\"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get auth user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU3ZTgxM2MzNGVmNzMxY2RjMjZjOGEwIn0sImlhdCI6MTU4NTM1Njg1MCwiZXhwIjoxNTg1NzE2ODUwfQ.9aTzV7QkPk-Y_7JQw8yjn4qCwceLHCOCdkZbcTAfJlA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"bob@ross.com\",\n\t\"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU3ZTgzNjczZGExNGQxZTU0Zjk2N2Y0In0sImlhdCI6MTU4NTM0OTQ3OSwiZXhwIjoxNTg1NzA5NDc5fQ.OcrIZjchmsoQbZOBVI1G-G5xs--hQ2vxSzPrBsO6E_k"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
