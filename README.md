@@ -30,20 +30,26 @@ This project was made to help with building RESTful APIs and microservices in a 
 
 #### 🚀 To deploy to Heroku:
 
-##### Prerequisite: Put your frontend code into the `client` directory for the heroku npm script to run correctly.
+##### Prerequisites: This assumes you have a frontend within the `client` directory for the heroku build script to run correctly. Recommended: React app; e.g. CRA within ./client. After which, add `"proxy": "http://localhost:5000"` within `./client/package.json` in order for both to communicate.
 
-- Create a Heroku account.
+<!-- prettier-ignore -->
+- Create your Heroku account.
 - Install heroku cli via their installer (link to heroku) or homebrew.
 - Log into your heroku account with `heroku login`.
-- Create the application on heroku with `heroku create`.
-- And subsquently push to heroku with `git push heroku master`.
+- Create your Heroku application if one isn't created yet; `heroku create`
+- Since we're ignoring the `./config/*.json` files which Heroku requires for a successful build, we should create a local only branch (e.g. production) to deploy from: 	- `git checkout -b production`
+- Add the config file into our track: `git add -f config/production.json`
+- Commit your changes; `git commit -am 'deploy...'`
+- Push up your local production branch for deployment; `git push heroku production:master`
+- Don't forget to make sure your production database is not whitelisted in MongoDB Atlas, otherwise the database connection will fail and your app will crash.
+- For subsequent changes, work off master and merge those into your local branch when ready to rebuild/deploy.
 
 ### Notes
 
 - Import `./Ramen.postman_collection.json` into Postman to rapidly setup the endpoints.
 - Non-MVC
   - No need for controllers since we're following the open/closed principle from S.O.L.I.D.
-- Heroku/Config.json: - Heroku needs your config/json files for a successful build, and since we're ignoring these in our .gitignore, it's recommended to create a local only branch (e.g. production), add that config file into our track and deploy from this local branch. - `git checkout -b production` - Add the config file: `git add -f config/production.json` - Commit your changes; `git commit -am 'deploy...'` - Create your Heroku project if one isn't created yet; `heroku create` - Push up your local branch; `git push heroku production:master` - Don't forget to make sure your production database is not whitelisted in MongoDB Atlas, otherwise the database connection will fail and your app will crash. - For subsequent changes, work off master and merge those into your local branch when ready to rebuild/deploy.
+- If you want to deploy to Heroku without the need of a `./client` directory (i.e. standalone api), then remove the `heroku-postbuild` npm script within `./package.json`. You may also remove the `client` and `dev` scripts as they would no longer apply.
 
 #### Todo's
 
