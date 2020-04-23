@@ -142,6 +142,130 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQ1ZTEwYWUyNTk0MTNlYzM0OGNhZTcyIn0sImlhdCI6MTU2Njg2NTI1NywiZXhwIjoxNTcwNDY1MjU3fQ.o6Wi4vZxE6xbgXcb-pMd7ekqTTMqxDWJcrfAaQGXwgo",
+								"description": "Bobs token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"text\": \"Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQ1ZTEwYWUyNTk0MTNlYzM0OGNhZTcyIn0sImlhdCI6MTU2NjQ0NTc0MiwiZXhwIjoxNTcwMDQ1NzQyfQ.aj5WLAo6NYlOxsP0b1x-gjqJCJyZjxiO8ceL2wXs6Wk",
+								"description": "Bobs token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Bobs token",
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQ1ZTEwYWUyNTk0MTNlYzM0OGNhZTcyIn0sImlhdCI6MTU2NjQ0NTc0MiwiZXhwIjoxNTcwMDQ1NzQyfQ.aj5WLAo6NYlOxsP0b1x-gjqJCJyZjxiO8ceL2wXs6Wk"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/5d6477c6eeda941beb93c841f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"5d6477c6eeda941beb93c841f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQ1ZTEwYWUyNTk0MTNlYzM0OGNhZTcyIn0sImlhdCI6MTU2Njg2NTI1NywiZXhwIjoxNTcwNDY1MjU3fQ.o6Wi4vZxE6xbgXcb-pMd7ekqTTMqxDWJcrfAaQGXwgo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/5d647a218f4e191d76a1a163",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"5d647a218f4e191d76a1a163"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

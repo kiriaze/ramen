@@ -8,12 +8,13 @@ const app = express();
 connectDB();
 
 // Init Middleware
-app.use(express.json({ extended: false }));
+app.use(express.json());
 
 // Define Routes
 // app.use(require('./routes/index')); // abstract routes into its own file export
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/posts', require('./routes/posts'));
 
 // Server static assets in production
 if (process.env.NODE_ENV === 'production') {

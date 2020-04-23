@@ -113,8 +113,8 @@ router.post(
 // @access   Private
 router.delete('/', auth, async (req, res) => {
 	try {
-		// Remove users tasks
-		await Task.deleteMany({
+		// Remove users Posts
+		await Post.deleteMany({
 			user: req.user.id
 		});
 
